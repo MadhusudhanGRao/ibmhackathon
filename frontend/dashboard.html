@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CyberRakshak AI — Incident Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>"/>
+</head>
+<body class="dashboard-body">
+
+<!-- HEADER -->
+<header class="navbar">
+  <div class="navbar-brand">
+    <span class="shield-icon">🛡️</span>
+    <span class="brand-name">CyberRakshak AI</span>
+    <span class="brand-tag">Incident Report</span>
+  </div>
+  <nav class="navbar-links">
+    <a href="/" class="nav-link">← Back to Home</a>
+    <a href="#summary" class="nav-link active">Summary</a>
+    <a href="#risk" class="nav-link">Risk Analysis</a>
+    <a href="#evidence" class="nav-link">Evidence</a>
+    <a href="#guidance" class="nav-link">Guidance</a>
+  </nav>
+  <div class="navbar-emergency">
+    <span class="emergency-pill">🚨 Cyber Fraud? Call <a href="tel:1930" style="color:inherit;text-decoration:underline;"><strong>1930</strong></a></span>
+  </div>
+</header>
+
+<!-- EMERGENCY BANNER (shown conditionally) -->
+<div id="emergencyBanner" class="emergency-banner hidden">
+  <div class="emergency-banner-content">
+    <span class="blink">🚨</span>
+    <strong>IMMEDIATE ACTION REQUIRED:</strong>
+    Call <a href="tel:1930" style="color:inherit;text-decoration:underline;"><strong>1930</strong></a> now — Financial Cyber Fraud Helpline (24/7)
+    <a href="https://cybercrime.gov.in/" target="_blank" rel="noopener" class="btn btn-warning btn-sm">
+      File at cybercrime.gov.in →
+    </a>
+  </div>
+</div>
+
+<!-- DEMO LABEL -->
+<div id="demoBanner" class="demo-banner hidden">
+  ⚠️ <strong>SYNTHETIC DEMO DATA</strong> — This report is based on a demonstration scenario. Not a real Bengaluru cybercrime case.
+</div>
+
+<!-- AI MODE BANNER -->
+<div id="aiModeBanner" class="ai-mode-banner"></div>
+
+<!-- MAIN DASHBOARD -->
+<main class="dashboard-main">
+  <div class="dashboard-container">
+
+    <!-- ── INCIDENT HEADER ── -->
+    <section id="summary" class="dash-section">
+      <div class="dash-header-card">
+        <div class="dash-id-row">
+          <div class="dash-incident-id" id="dashIncidentId">INC-…</div>
+          <div class="dash-generated" id="dashGeneratedAt"></div>
+          <button class="btn btn-outline btn-sm" id="downloadReportBtn">⬇️ Download Report</button>
+        </div>
+        <div class="risk-badge-row">
+          <div class="risk-badge" id="dashRiskBadge">—</div>
+          <div class="category-badge" id="dashCategory">—</div>
+          <div class="ongoing-badge hidden" id="dashOngoing">🔴 ONGOING</div>
+        </div>
+        <h2 class="dash-summary-title">Incident Summary</h2>
+        <p class="dash-executive-summary" id="dashExecutiveSummary">Analyzing…</p>
+        <div class="key-facts-row" id="dashKeyFacts"></div>
+        <div class="dash-meta-row">
+          <div class="dash-meta-item"><span class="meta-label">Platform:</span> <span id="dashPlatform">—</span></div>
+          <div class="dash-meta-item"><span class="meta-label">Date:</span> <span id="dashDate">—</span></div>
+          <div class="dash-meta-item"><span class="meta-label">Financial Loss:</span> <span id="dashLoss">—</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PRIVACY STATUS ── -->
+    <section class="dash-section">
+      <h3 class="dash-section-title">🔒 Privacy & Data Protection</h3>
+      <div class="privacy-card" id="privacyCard">
+        <div class="privacy-status-row">
+          <div class="privacy-status-badge" id="privacyStatusBadge">CHECKING…</div>
+          <div class="privacy-status-text" id="privacyStatusText"></div>
+        </div>
+        <div id="privacyWarningsList" class="privacy-warnings-list"></div>
+      </div>
+    </section>
+
+    <!-- ── RISK ASSESSMENT ── -->
+    <section id="risk" class="dash-section">
+      <h3 class="dash-section-title">🔍 Scam Analysis & Risk Assessment</h3>
+      <div class="risk-card">
+        <div class="risk-meter-row">
+          <div class="risk-meter" id="riskMeter">
+            <div class="risk-meter-label">Risk Level</div>
+            <div class="risk-meter-value" id="riskMeterValue">—</div>
+          </div>
+          <div class="risk-details">
+            <div class="risk-category-label">Potential Scam Type</div>
+            <div class="risk-category-value" id="riskScamCategory">—</div>
+            <div class="risk-explanation" id="riskExplanation"></div>
+          </div>
+        </div>
+        <div class="indicators-section">
+          <h4 class="indicators-title">Suspicious Indicators Detected</h4>
+          <div id="indicatorsList" class="indicators-list"></div>
+        </div>
+        <div class="uncertainty-note" id="uncertaintyNote"></div>
+      </div>
+    </section>
+
+    <!-- ── EVIDENCE & TIMELINE ── -->
+    <section id="evidence" class="dash-section">
+      <h3 class="dash-section-title">🗂️ Evidence & Incident Timeline</h3>
+      <div class="evidence-grid">
+        <div class="evidence-panel">
+          <h4 class="panel-title">Evidence Inventory</h4>
+          <div id="evidenceList" class="evidence-list">
+            <div class="empty-state">No evidence files submitted.</div>
+          </div>
+          <div class="missing-evidence-section">
+            <h4 class="panel-title">📋 Missing Evidence Checklist</h4>
+            <div id="missingEvidenceList" class="missing-list"></div>
+          </div>
+        </div>
+        <div class="timeline-panel">
+          <h4 class="panel-title">📅 Chronological Timeline</h4>
+          <div id="timelineList" class="timeline-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── REPORTING GUIDANCE ── -->
+    <section id="guidance" class="dash-section">
+      <h3 class="dash-section-title">📢 Official Reporting Guidance</h3>
+      <div class="guidance-grid">
+        <div class="guidance-panel">
+          <h4 class="panel-title">⚡ Immediate Actions</h4>
+          <div id="immediateActionsList" class="actions-list"></div>
+        </div>
+        <div class="guidance-panel">
+          <h4 class="panel-title">📝 Reporting Steps</h4>
+          <div id="reportingStepsList" class="steps-list"></div>
+        </div>
+        <div class="guidance-panel full-width">
+          <h4 class="panel-title">🏦 Bank Contact Guidance</h4>
+          <div id="bankGuidance" class="bank-guidance-text"></div>
+        </div>
+        <div class="guidance-panel full-width">
+          <h4 class="panel-title">📋 Complaint Preparation Checklist</h4>
+          <div id="complaintChecklist" class="checklist-list"></div>
+        </div>
+      </div>
+
+      <!-- Official Resources -->
+      <div class="official-resources-row">
+        <h4 class="panel-title">Official Indian Cybercrime Reporting Channels</h4>
+        <div class="official-resources-grid">
+          <div class="official-resource emergency-resource">
+            <a href="tel:1930" style="color:inherit;text-decoration:none;"><div class="resource-num-sm">1930</div></a>
+            <div>
+              <strong>Financial Fraud Helpline</strong><br/>
+              <small><a href="tel:1930" style="color:inherit;text-decoration:underline;">Call 1930</a> immediately for ongoing fraud</small>
+            </div>
+          </div>
+          <div class="official-resource">
+            <div class="resource-icon-sm">🌐</div>
+            <div>
+              <strong>National Cyber Crime Portal</strong><br/>
+              <a href="https://cybercrime.gov.in/" target="_blank" rel="noopener">cybercrime.gov.in</a>
+            </div>
+          </div>
+          <div class="official-resource">
+            <div class="resource-icon-sm">🏛️</div>
+            <div>
+              <strong>I4C — MHA</strong><br/>
+              <a href="https://i4c.mha.gov.in/" target="_blank" rel="noopener">i4c.mha.gov.in</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="disclaimer-box" id="dashDisclaimer"></div>
+    </section>
+
+    <!-- ── AWARENESS TIPS ── -->
+    <section class="dash-section">
+      <h3 class="dash-section-title">💡 Awareness Tips for Your Incident Type</h3>
+      <div id="awarenessTipsList" class="awareness-tips-list"></div>
+    </section>
+
+    <!-- ── AGENT STATUS ── -->
+    <section class="dash-section">
+      <h3 class="dash-section-title">🤖 AI Agent Execution Status</h3>
+      <div class="agent-status-grid" id="agentStatusGrid"></div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-brand">🛡️ <strong>CyberRakshak AI</strong> — Detect. Understand. Organize. Report. Protect.</div>
+    <div class="footer-disclaimer">
+      This platform provides guidance and analysis only. It does not replace law enforcement or submit official complaints.
+      AI-generated analysis identifies potential indicators only and does not verify criminal activity.
+    </div>
+  </div>
+</footer>
+
+<script src="/js/app.js"></script>
+</body>
+</html>

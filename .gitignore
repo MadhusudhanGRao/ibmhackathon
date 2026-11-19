@@ -1,0 +1,32 @@
+﻿# Environment & Secrets
+.env
+*.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Runtime data
+uploads/*
+!uploads/.gitkeep
+reports/*
+!reports/.gitkeep
+
+# Temp dev scripts
+_check_services.py
+_test_llms.py
+database/reset_password.sql
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/

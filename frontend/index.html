@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CyberRakshak AI — Cybercrime Reporting Platform</title>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>"/>
+</head>
+<body>
+<!-- ═══════════════════════════════════════════════════════════
+     HEADER / NAVBAR
+═══════════════════════════════════════════════════════════ -->
+<header class="navbar">
+  <div class="navbar-brand">
+    <span class="shield-icon">🛡️</span>
+    <span class="brand-name">CyberRakshak AI</span>
+    <span class="brand-tag">Bengaluru</span>
+  </div>
+  <nav class="navbar-links">
+    <a href="#hero" class="nav-link active">Home</a>
+    <a href="#report" class="nav-link">Report Incident</a>
+    <a href="#awareness" class="nav-link">Awareness</a>
+    <a href="#resources" class="nav-link">Resources</a>
+  </nav>
+  <div class="navbar-emergency">
+    <span class="emergency-pill">🚨 Cyber Fraud? Call <a href="tel:1930" style="color:inherit;text-decoration:underline;"><strong>1930</strong></a></span>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════════════ -->
+<section id="hero" class="hero-section">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🤖 Powered by IBM Granite · Google Gemini · Groq — Multi-LLM AI</div>
+    <h1 class="hero-title">Your Digital Safety.<br/><span class="accent-text">Our Priority.</span></h1>
+    <p class="hero-subtitle">
+      CyberRakshak AI helps Bengaluru residents detect scam indicators, organize evidence,
+      and find official reporting channels — all in one secure platform.
+    </p>
+    <div class="hero-cta-group">
+      <a href="#report" class="btn btn-primary btn-lg">
+        🚨 Report a Cyber Incident
+      </a>
+      <a href="#awareness" class="btn btn-outline btn-lg">
+        🔍 Check Suspicious Activity
+      </a>
+    </div>
+    <div class="hero-emergency-card">
+      <div class="emergency-icon">📞</div>
+      <div>
+        <div class="emergency-title">Financial Cyber Fraud Emergency</div>
+        <div class="emergency-desc">Call <a href="tel:1930" style="color:inherit;text-decoration:underline;"><strong>1930</strong></a> immediately for ongoing financial fraud.
+          Available 24/7 across India.</div>
+      </div>
+      <a href="https://cybercrime.gov.in/" target="_blank" rel="noopener" class="btn btn-warning btn-sm">
+        Report at cybercrime.gov.in →
+      </a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat-card"><div class="stat-num">6</div><div class="stat-label">AI Agents</div></div>
+    <div class="stat-card"><a href="tel:1930" style="color:inherit;text-decoration:none;"><div class="stat-num">1930</div><div class="stat-label">Helpline</div></a></div>
+    <div class="stat-card"><div class="stat-num">100%</div><div class="stat-label">Privacy First</div></div>
+    <div class="stat-card"><div class="stat-num">Free</div><div class="stat-label">Service</div></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HOW IT WORKS
+═══════════════════════════════════════════════════════════ -->
+<section class="how-section">
+  <div class="container">
+    <h2 class="section-title">How CyberRakshak AI Works</h2>
+    <p class="section-sub">Six specialized AI agents work together through a central orchestrator.</p>
+    <div class="agents-grid">
+      <div class="agent-card">
+        <div class="agent-icon">🔒</div>
+        <div class="agent-name">Privacy Protection</div>
+        <div class="agent-desc">Detects and redacts OTPs, PINs and sensitive data before AI processing.</div>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">📋</div>
+        <div class="agent-name">Incident Intake</div>
+        <div class="agent-desc">Structures your report and classifies the incident category.</div>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">🔍</div>
+        <div class="agent-name">Scam Analysis</div>
+        <div class="agent-desc">Identifies suspicious indicators and assesses risk level.</div>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">🗂️</div>
+        <div class="agent-name">Evidence Organizer</div>
+        <div class="agent-desc">Organizes evidence and builds a chronological incident timeline.</div>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">📢</div>
+        <div class="agent-name">Reporting Guidance</div>
+        <div class="agent-desc">Guides you to official Indian reporting channels with step-by-step instructions.</div>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">📊</div>
+        <div class="agent-name">Guidance Dashboard</div>
+        <div class="agent-desc">Consolidates all agent outputs into one actionable incident report.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     INCIDENT REPORT FORM
+═══════════════════════════════════════════════════════════ -->
+<section id="report" class="report-section">
+  <div class="container">
+    <h2 class="section-title">Report a Cyber Incident</h2>
+    <p class="section-sub">Your information is processed privately. Sensitive data is automatically redacted before AI analysis.</p>
+
+    <div class="privacy-notice">
+      🔒 <strong>Privacy Notice:</strong> Never enter OTPs, passwords, UPI PINs or CVVs here.
+      Our Privacy Protection Agent will warn you if sensitive data is detected.
+    </div>
+
+    <form id="incidentForm" class="incident-form" enctype="multipart/form-data" novalidate>
+      <div class="form-grid">
+        <!-- Category -->
+        <div class="form-group full-width">
+          <label class="form-label" for="incident_category">Incident Category *</label>
+          <select id="incident_category" name="incident_category" class="form-control" required>
+            <option value="">— Select incident type —</option>
+            <option value="UPI Fraud">UPI / Financial Fraud</option>
+            <option value="Banking Fraud">Banking / Netbanking Fraud</option>
+            <option value="Phishing">Phishing Attack</option>
+            <option value="Fake KYC">Fake KYC / Document Fraud</option>
+            <option value="OTP Scam">OTP Scam</option>
+            <option value="Social Media Impersonation">Social Media Impersonation</option>
+            <option value="Account Takeover">Account Takeover / Hacking</option>
+            <option value="Fake Customer Care">Fake Customer Care</option>
+            <option value="Online Shopping Fraud">Online Shopping Fraud</option>
+            <option value="Job Scam">Job / Employment Scam</option>
+            <option value="Investment Scam">Investment / Trading Scam</option>
+            <option value="Identity Theft">Identity Theft</option>
+            <option value="Other Suspicious Activity">Other Suspicious Activity</option>
+          </select>
+        </div>
+
+        <!-- Description -->
+        <div class="form-group full-width">
+          <label class="form-label" for="description">Describe What Happened *</label>
+          <textarea id="description" name="description" class="form-control" rows="5"
+            placeholder="Describe the incident in detail. What happened? Who contacted you? What did they say or ask you to do?"
+            required minlength="10"></textarea>
+          <div class="form-hint">Do NOT include passwords, OTPs, PINs or CVVs.</div>
+          <div id="privacy-warning" class="privacy-warning hidden"></div>
+        </div>
+
+        <!-- Date & Time -->
+        <div class="form-group">
+          <label class="form-label" for="incident_date">Incident Date</label>
+          <input type="date" id="incident_date" name="incident_date" class="form-control"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="incident_time">Approximate Time</label>
+          <input type="time" id="incident_time" name="incident_time" class="form-control"/>
+        </div>
+
+        <!-- Platform -->
+        <div class="form-group">
+          <label class="form-label" for="platform">Platform / App Involved</label>
+          <input type="text" id="platform" name="platform" class="form-control"
+            placeholder="e.g. Google Pay, SBI YONO, WhatsApp, Facebook"/>
+        </div>
+
+        <!-- Financial Loss -->
+        <div class="form-group">
+          <label class="form-label" for="financial_loss">Approximate Financial Loss (₹)</label>
+          <input type="number" id="financial_loss" name="financial_loss" class="form-control"
+            placeholder="0" min="0" step="1"/>
+        </div>
+
+        <!-- Ongoing -->
+        <div class="form-group full-width">
+          <label class="form-label">Is this incident still ongoing?</label>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="ongoing_status" value="true"/> Yes — this is happening right now
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="ongoing_status" value="false" checked/> No — it already happened
+            </label>
+          </div>
+        </div>
+
+        <!-- Evidence Upload -->
+        <div class="form-group full-width">
+          <label class="form-label" for="evidence">Upload Evidence (Optional)</label>
+          <div class="upload-area" id="uploadArea">
+            <div class="upload-icon">📎</div>
+            <div class="upload-text">Drop screenshots or documents here, or <span class="upload-link">click to browse</span></div>
+            <div class="upload-hint">Supported: PNG, JPG, PDF, TXT (max 16 MB each)</div>
+            <input type="file" id="evidence" name="evidence" class="upload-input" multiple
+              accept=".png,.jpg,.jpeg,.gif,.pdf,.txt,.doc,.docx"/>
+          </div>
+          <div id="file-list" class="file-list"></div>
+        </div>
+
+        <!-- Consent -->
+        <div class="form-group full-width">
+          <label class="checkbox-label">
+            <input type="checkbox" id="consent" name="consent" value="true" required/>
+            <span>I consent to CyberRakshak AI processing my incident description to provide analysis and guidance.
+              I understand this platform does not submit official complaints on my behalf.</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">
+          🛡️ Analyze My Incident
+        </button>
+        <button type="button" class="btn btn-outline" onclick="loadDemo()">
+          📋 Load Demo Scenario
+        </button>
+      </div>
+
+      <div id="form-error" class="form-error hidden"></div>
+    </form>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     AWARENESS CENTRE
+═══════════════════════════════════════════════════════════ -->
+<section id="awareness" class="awareness-section">
+  <div class="container">
+    <h2 class="section-title">Cyber Awareness Centre</h2>
+    <p class="section-sub">Common scams targeting Bengaluru residents — stay informed and stay safe.</p>
+    <div class="awareness-grid">
+      <div class="awareness-card">
+        <div class="awareness-icon">📱</div>
+        <h3>Fake KYC SMS</h3>
+        <p>Banks <strong>never</strong> ask for KYC updates via SMS links. Such messages are phishing attempts.</p>
+        <div class="awareness-tag warning">Common in Bengaluru</div>
+      </div>
+      <div class="awareness-card">
+        <div class="awareness-icon">💸</div>
+        <h3>UPI Payment Fraud</h3>
+        <p>Scammers send payment requests disguised as refunds or cashback. Accepting a UPI request means <strong>you are paying, not receiving</strong>.</p>
+        <div class="awareness-tag critical">High Risk</div>
+      </div>
+      <div class="awareness-card">
+        <div class="awareness-icon">📞</div>
+        <h3>Fake Customer Care</h3>
+        <p>Fake bank helpline numbers appear in Google Search. Always use the number <strong>printed on your card</strong>.</p>
+        <div class="awareness-tag warning">Very Common</div>
+      </div>
+      <div class="awareness-card">
+        <div class="awareness-icon">🛍️</div>
+        <h3>Online Shopping Fraud</h3>
+        <p>Fake websites clone popular stores. Check for HTTPS, verify the domain, and use official apps.</p>
+        <div class="awareness-tag medium">Medium Risk</div>
+      </div>
+      <div class="awareness-card">
+        <div class="awareness-icon">👤</div>
+        <h3>Social Media Impersonation</h3>
+        <p>Fake profiles impersonate friends or celebrities to request money or extract information.</p>
+        <div class="awareness-tag warning">Common</div>
+      </div>
+      <div class="awareness-card">
+        <div class="awareness-icon">💼</div>
+        <h3>Job Scams</h3>
+        <p>Fake work-from-home offers ask for registration fees. Legitimate employers never ask for upfront payment.</p>
+        <div class="awareness-tag medium">Rising</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     OFFICIAL RESOURCES
+═══════════════════════════════════════════════════════════ -->
+<section id="resources" class="resources-section">
+  <div class="container">
+    <h2 class="section-title">Official Reporting Resources</h2>
+    <p class="section-sub">Use only official Government of India portals to report cybercrime.</p>
+    <div class="resources-grid">
+      <div class="resource-card emergency-resource">
+        <a href="tel:1930" style="color:inherit;text-decoration:none;"><div class="resource-num">1930</div></a>
+        <h3>Financial Cyber Fraud Helpline</h3>
+        <p>Call <a href="tel:1930" style="color:inherit;text-decoration:underline;"><strong>1930</strong></a> immediately for ongoing financial fraud. Available 24/7 across India.</p>
+        <div class="resource-badge">🚨 Emergency</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">🌐</div>
+        <h3>National Cyber Crime Reporting Portal</h3>
+        <p>Official portal to report all types of cybercrime to the Government of India.</p>
+        <a href="https://cybercrime.gov.in/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+          Visit cybercrime.gov.in →
+        </a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">🏛️</div>
+        <h3>I4C — Indian Cyber Crime Coordination Centre</h3>
+        <p>Ministry of Home Affairs' national cybercrime coordination body.</p>
+        <a href="https://i4c.mha.gov.in/" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+          Visit i4c.mha.gov.in →
+        </a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">📱</div>
+        <h3>CEIR — Block Lost Device</h3>
+        <p>Block a lost or stolen mobile phone used in fraud through the government portal.</p>
+        <a href="https://www.ceir.gov.in/" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+          Visit ceir.gov.in →
+        </a>
+      </div>
+    </div>
+    <div class="resources-disclaimer">
+      ⚠️ <strong>CyberRakshak AI does not submit official complaints on your behalf.</strong>
+      You must file your complaint directly at the official portals above.
+      Always verify official portal addresses before submitting personal information.
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      🛡️ <strong>CyberRakshak AI</strong> — Detect. Understand. Organize. Report. Protect.
+    </div>
+    <div class="footer-info">
+      Built for the IBM Bob Hackathon with IBM SkillsBuild · Primary Users: Bengaluru Residents
+    </div>
+    <div class="footer-disclaimer">
+      This platform provides guidance and analysis only. It does not replace law enforcement,
+      verify criminal activity, or submit official complaints.
+      Powered by IBM Granite AI · Google Gemini · Groq Llama · IBM Bob IDE.
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════════
+     LOADING OVERLAY
+═══════════════════════════════════════════════════════════ -->
+<div id="loadingOverlay" class="loading-overlay hidden">
+  <div class="loading-card">
+    <div class="loading-shield">🛡️</div>
+    <div class="loading-title">CyberRakshak AI is analyzing your report</div>
+    <div class="loading-steps" id="loadingSteps">
+      <div class="loading-step active" id="step-privacy">🔒 Protecting sensitive information…</div>
+      <div class="loading-step" id="step-intake">📋 Collecting incident information…</div>
+      <div class="loading-step" id="step-scam">🔍 Analyzing suspicious activity…</div>
+      <div class="loading-step" id="step-evidence">🗂️ Organizing digital evidence…</div>
+      <div class="loading-step" id="step-reporting">📢 Preparing reporting guidance…</div>
+      <div class="loading-step" id="step-dashboard">📊 Generating your incident report…</div>
+    </div>
+    <div class="loading-bar"><div class="loading-progress" id="loadingProgress"></div></div>
+  </div>
+</div>
+
+<script src="/js/app.js"></script>
+</body>
+</html>
